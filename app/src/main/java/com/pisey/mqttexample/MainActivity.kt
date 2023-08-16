@@ -10,10 +10,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        findViewById<Button>(R.id.btnSend).setOnClickListener {
-            runWithBackgroundLocationPermission {
-                LocationTrackingService.start(this)
-            }
+        findViewById<Button>(R.id.btnRun).setOnClickListener {
+//            runWithBackgroundLocationPermission {
+//                LocationTrackingService.start(this)
+//            }
+
+            LocationTrackingWorker.start(this)
         }
 
 

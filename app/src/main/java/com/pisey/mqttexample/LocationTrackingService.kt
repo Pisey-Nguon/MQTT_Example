@@ -21,6 +21,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class LocationTrackingService : LifecycleService() {
+
     companion object{
         fun start(context: Context){
             val intent = Intent(context,LocationTrackingService::class.java)
